@@ -1,0 +1,22 @@
+<div class="board_block" *ngIf="hideColumnCreation">
+  <div class="board_item">
+    <div class="board_title">
+    <p>Create new Column</p>
+    <div class="align_items">
+      <form #myForm="ngForm" novalidate>
+        <div class="form_group">
+          <label  class="title">Title</label>
+          <input class="form_control" name="title" [(ngModel)]="column.title" #title="ngModel" required>
+          <div [hidden]="title.valid || title.untouched" class="alert">
+            Enter title
+          </div>
+        </div>
+        <div class="form_group">
+          <button [disabled]="myForm.invalid" class="button_confirm" type="submit"
+            (click)="submit(myForm)">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

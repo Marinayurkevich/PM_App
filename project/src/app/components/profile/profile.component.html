@@ -1,0 +1,17 @@
+<div class="profile_block" *ngIf="hideProfile">
+  <div class="panda_profile"><img src="../../../assets/images/profile_panda_pic.jfif" alt="panda_profile"></div>
+  <div class="layout">
+    <div class="profile_info">
+      <span class="title">Profile</span>
+      <div class="profile_group">
+        <p class="task_description">UserName: {{registeredUser.name}}</p>
+        <button class="btn_edit">&#x270E;</button>
+      </div>
+      <div class="profile_group">
+        <p class="task_description">Login: {{registeredUser.login}}</p>
+        <button class="btn_edit">&#x270E;</button>
+      </div>
+      <button class="button_confirm" (click)="showDeleteConfirm = !showDeleteConfirm">Delete Profile</button>
+      <app-remove-user *ngIf="showDeleteConfirm"></app-remove-user>
+      <button class="button_confirm" (click)="goToWelcomePage()">Log out</button>
+    </div>

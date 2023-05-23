@@ -1,0 +1,32 @@
+<div class="wrapper_main">
+  <app-header></app-header>
+  <div class="main">
+    <div class="main_board">
+      <div class="main_block">
+        <h2>Boards</h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="title">Board Number</th>
+              <th class="title">Title</th>
+              <th class="title">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let board of boardList; let i=index">
+              <td class="task_description" scope="row">{{i+1}}</td>
+              <td class="task_description">{{board.title}}</td>
+              <td class="task_description">{{board.description}}</td>
+              <td><button type="button" (click)="showBoard(board._id)" class="btn_edit">&#x270E;</button></td>
+              <td><button type="button" class="btn_cross_board" (click)="deleteBoard(board._id)">&#x2718;</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="footer_place"></div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

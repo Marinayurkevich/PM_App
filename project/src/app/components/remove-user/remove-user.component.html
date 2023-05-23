@@ -1,0 +1,7 @@
+<div class="confirmation_block" *ngIf="hideDeleteConfirm">
+  <span class="confirm_question">Do you really want to delete this profile?</span>
+  <div class="confirm_choice">
+    <button class="button_confirm" (click)="deleteUser()">Yes</button>
+    <button class="button_confirm" (click)="doNotDelete()">No</button>
+  </div>
+</div>
