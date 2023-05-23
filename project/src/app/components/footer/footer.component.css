@@ -1,0 +1,23 @@
+.footer {
+  background-color:  var(--color--light-green);
+}
+
+.designed {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+.course_logo {
+  margin-left: 20px;
+  padding-top: 15px;
+}
+
+.designed a img {
+  width: 100px;
+}
+
+.github_logo {
+  height: 50px;
+}

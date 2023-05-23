@@ -1,0 +1,27 @@
+<div class="wrapper_main">
+  <app-header></app-header>
+  <div class="main">
+    <button class="btn_board" (click)="newColumnCreation=!newColumnCreation">Create Column</button>
+    <app-new-column-create *ngIf="newColumnCreation"></app-new-column-create>
+    <div>
+      <div class="board">
+        <div class="board_wrapper">
+          <div class="board_columns" cdkDropListGroup>
+            <div class="board_column" *ngFor="let column of board.columns" cdkDrag>
+              <div class="column_title">
+                {{column.name}}
+              </div>
+              <div class="task_container" cdkDropList #todoList="cdkDropList" [cdkDropListData]="column.tasks"
+                (cdkDropListDropped)="drop($event)">
+                <div class="task" *ngFor="let item of column.tasks" cdkDrag>{{item}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_place"></div>
+  </div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

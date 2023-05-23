@@ -1,0 +1,35 @@
+<div class="board_block" *ngIf="hideBoardCreation">
+  <div class="board_item">
+    <div class="board_title">
+    <p>Create new Board</p>
+    <div class="align_items">
+      <form #myForm="ngForm" novalidate>
+        <div class="form_group">
+          <label  class="title">Title</label>
+          <input class="form_control" name="title" [(ngModel)]="board.title" #title="ngModel" required>
+          <div [hidden]="title.valid || title.untouched" class="alert">
+            Enter title
+          </div>
+        </div>
+        <div class="form_group">
+          <label  class="title">Owner</label>
+          <input class="form_control" name="owner" [(ngModel)]="board.owner" #owner="ngModel" required>
+          <div [hidden]="owner.valid || owner.untouched" class="alert">
+            Enter owner
+          </div>
+        </div>
+        <div class="form_group">
+          <label  class="title">Users</label>
+          <input class="form_control" name="users" [(ngModel)]="board.users" #users="ngModel" required>
+          <div [hidden]="users.valid || users.untouched" class="alert">
+            Enter users
+          </div>
+        </div>
+        <div class="form_group">
+          <button [disabled]="myForm.invalid" class="button_confirm" type="submit"
+            (click)="submit(myForm)">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

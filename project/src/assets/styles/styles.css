@@ -1,0 +1,113 @@
+:root {
+  --color--light-green: #67d61d;
+  --color--light-yellow: #f7f31d;
+  --color--light-blue: #56c4f7;
+  --color--green-button: #88f323c9;
+  --item--width: 250px;
+  --item--height: 50px;
+  --column--width: 300px;
+
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper_main {
+  min-height: 100%;
+  margin-bottom: -90px;
+}
+
+.footer,
+.footer_place {
+  height: 90px;
+}
+
+h1 {
+  font-family: 'Chewy';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  font-family: 'Chewy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 0.06em;
+}
+
+p {
+  font-family: 'Chewy';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  margin: auto 20px auto 0;
+}
+
+.alert {
+  color: red;
+  font-family: 'Chewy';
+  font-style: oblique;
+  font-weight: 50;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  margin: auto 20px auto 0;
+}
+
+button,
+label,
+a {
+  font-family: 'Chewy';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+
+@media (max-width:1200px) {
+  .main {
+    background: none;
+  }
+}
+
+
+@media (max-width:900px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .designed a img {
+    width: 70px;
+  }
+
+
+  .github_logo {
+    height: 30px;
+  }
+}

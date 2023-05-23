@@ -1,0 +1,44 @@
+<div class="wrapper_main">
+  <app-header class="header"></app-header>
+<div class="layout1">
+  <div class="panda_sign"><img src="./assets/images/registration.jpg" alt="panda"></div>
+  <div class="layout">
+    <p>Sign up</p>
+    <div class="align_items">
+      <form #myForm="ngForm" novalidate>
+        <div class="form_group">
+          <label>Username</label>
+          <input class="form_control" name="name" [(ngModel)]="user.name" #name="ngModel" required />
+          <div [hidden]="name.valid || name.untouched" class="alert">
+            Enter your name
+          </div>
+        </div>
+        <div class="form_group">
+          <label>Your Login</label>
+          <input class="form_control" name="login" [(ngModel)]="user.login" #login="ngModel" required />
+          <div [hidden]="login.valid || login.untouched" class="alert">
+            Enter your login
+          </div>
+        </div>
+        <div class="form_group">
+          <label>Password</label>
+          <input class="form_control" type="password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="6"
+            required>
+          <div [hidden]="password.valid || password.untouched" class="alert">
+            Your password is less than 6 characters
+          </div>
+        </div>
+        <div class="form_group">
+          <button [disabled]="myForm.invalid" class="button_register" type="submit"
+            (click)="submit(myForm)">Submit</button>
+          <p>Have you got an account?</p>
+          <button class="button_register" (click)="goToSignIn()">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="footer_place"></div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

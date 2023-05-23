@@ -1,0 +1,44 @@
+.main_layout {
+  background-image: url('../../../assets/images/bamboo.png');
+  background-position: right bottom;
+  background-size: 31%;
+  background-repeat: no-repeat;
+  }
+
+  .content {
+    display: flex;
+    margin: 150px auto 0;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .welcome_text {
+    display: flex;
+    max-width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .align {
+    margin-left: auto;
+  }
+
+  .panda_welcome img {
+    display: flex;
+    width: 70%;
+    margin: auto;
+  }
+
+
+  .powered_by {
+    display: flex;
+    align-items: center;
+  }
+
+  .ts_logo img,
+  .angular_logo img {
+    width: 80px;
+    padding: 0 20px 30px;
+  }

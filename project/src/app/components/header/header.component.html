@@ -1,0 +1,35 @@
+<div class="header">
+  <div class="logo"><a (click)="goToWelcomePage()"><img src="./assets/images/Logo1.png" alt="Logo"></a>
+  </div>
+  <div class="button_container" *ngIf="router.url=='/'">
+    <button class="button_register" routerLink="/login">Sign in</button>
+    <button class="button_register" routerLink="/register">Sign up</button>
+  </div>
+  <div class="button_container" *ngIf="router.url=='/register'">
+    <button class="button_register" routerLink="/login">Sign in</button>
+    <button class="button_register" routerLink="/register">Sign up</button>
+  </div>
+  <div class="button_container" *ngIf="router.url=='/login'">
+    <button class="button_register" routerLink="/login">Sign in</button>
+    <button class="button_register" routerLink="/register">Sign up</button>
+  </div>
+  <div class="button_container" *ngIf="router.url=='/main'">
+    <button class="btn_board" (click)="newBoardCreation=!newBoardCreation">Create Board</button>
+    <app-new-board-create *ngIf="newBoardCreation"></app-new-board-create>
+    <button class="btn_main" (click)="showProfile = !showProfile">Profile</button>
+    <app-profile *ngIf="showProfile"></app-profile>
+  </div>
+  <div class="button_container" *ngIf="router.url=='/board'">
+    <button class="btn_main" routerLink="/main">&#9668;</button>
+    <button class="btn_main" (click)="showProfile = !showProfile">Profile</button>
+    <app-profile *ngIf="showProfile"></app-profile>
+  </div>
+  <div class="button_container" *ngIf="router.url.startsWith('/board/')">
+    <button class="btn_main" routerLink="/main">&#9668;</button>
+    <button class="btn_board" (click)="showDeleteConfirm = !showDeleteConfirm">Delete Board</button>
+    <app-delete-confirm *ngIf="showDeleteConfirm"></app-delete-confirm>
+    <button class="btn_main" (click)="showProfile = !showProfile">Profile</button>
+    <app-profile *ngIf="showProfile"></app-profile>
+  </div>
+</div>
+<router-outlet></router-outlet>
